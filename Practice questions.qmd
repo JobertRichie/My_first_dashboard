@@ -1,0 +1,93 @@
+---
+title: "Gapminder"
+format: dashboard
+---
+
+# Page 1
+
+## Row1 {height=30%}
+
+### 
+
+```{r}
+plot(cars)
+```
+
+###
+
+```{r}
+plot(cars)
+```
+
+###
+
+```{r}
+plot(cars)
+```
+
+## Row2 {height=70%}
+
+### {width=70%}
+```{r}
+plot(cars)
+```
+
+### {width=30%}
+```{r}
+plot(cars)
+```
+
+# Page 2
+## {height=20%}
+###
+```{r}
+plot(cars)
+```
+### 
+```{r}
+plot(women)
+```
+
+## Row {height=80%}
+### {width=70%}
+```{r}
+plot(iris)
+```
+
+### {width=30%} {.tabset}
+#### Tab1
+```{r}
+plot(cars)
+```
+
+#### Tab2
+```{r}
+plot(women)
+```
+
+# Page 3
+## Column 1
+### Row1 {height=40%}
+
+####
+
+```{r}
+plot(cars)
+```
+
+####
+
+```{r}
+plot(women)
+```
+
+### Row2 {height=60%}
+
+####
+
+```{r}
+plot(cars)
+```
+
+## Column2 {.sidebar width=20%}
+This is my side bar at the right

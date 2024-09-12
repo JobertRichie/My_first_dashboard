@@ -1,0 +1,94 @@
+---
+title: "My first dashboard"
+format: dashboard
+theme: zephir
+---
+
+```{r}
+if(require(pacman)) install.packages("pacman")
+pacman::p_load(tidyverse,
+               plotly,
+               reactable,
+               bslib,
+               bsicons,
+               shiny
+               )
+```
+
+# Page 1 
+
+## {.tabset}
+
+### Column 1 
+```{r}
+plot(iris)
+```
+
+### Column 2 
+
+```{r}
+plot(women)
+```
+
+### Column 3
+
+```{r}
+plot(cars)
+```
+
+# Page 2 
+
+## {.tabset}
+### Tab 1
+```{r}
+p <- ggplot(cars,
+       aes(speed, dist)) +
+  geom_point()
+
+ggplotly(p)
+```
+### Tab 2
+
+```{r}
+reactable(iris)
+```
+
+# Page 3
+
+## {height=30%}
+
+```{r}
+value_box(
+  title = "Customer lifetime value",
+  value = "$5,000",
+  showcase = bsicons::bs_icon("globe2"),
+  theme = "primary"
+)
+```
+
+```{r}
+value_box(
+  title = "Customer lifetime value",
+  value = "$5,000",
+  showcase = bsicons::bs_icon("tropical-storm"),
+  theme = "teal"
+)
+```
+
+```{r}
+value_box(
+  title = "Customer lifetime value",
+  value = "$5,000",
+  showcase = bsicons::bs_icon("braces-asterisk"),
+  theme = "bg-success"
+)
+```
+
+## {height=70%}
+
+```{r}
+r <- ggplot(women, aes(weight, height)) +
+  geom_line()
+
+ggplotly(r)
+```
